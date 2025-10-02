@@ -12,8 +12,6 @@
 - **Bypass Paste Detection**: Simulates natural typing to avoid triggering anti-paste mechanisms
 - **Context Menu Integration**: Right-click on any text field to paste directly
 - **Keyboard Shortcut**: Quick paste with `Alt + D`
-- **Intelligent Field Detection**: Automatically detects input fields, textareas, and contenteditable elements
-- **Character-by-Character Typing**: Mimics human typing patterns with customizable delays
 
 ### 👁️ Always Active Window
 - **Focus Preservation**: Keeps browser window active even when switching applications
