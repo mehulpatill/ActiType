@@ -24,11 +24,12 @@
 ## 🔧 Installation
 
 ### Manual Installation (Developer Mode)
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the extension folder
-5. The extension will appear in your toolbar
+1. Download(zip) or clone this repository
+2. Extract the folder
+3. Open Chrome and navigate to `chrome://extensions/`
+4. Enable "Developer mode" in the top right
+5. Click "Load unpacked" and select the extension folder
+6. The extension will appear in your toolbar
 
 ## 🎮 Usage
 
