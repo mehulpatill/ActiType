@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "ActiType",
+  "version": "2.0",
+  "description": "Smart paste  + keeps window always active",
+  "permissions": ["scripting", "contextMenus", "activeTab", "clipboardRead", "storage"],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["isolated.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Smart Paste & Always Active"
+  }
+}

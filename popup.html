@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    h3 {
+      margin: 0 0 15px 0;
+      font-size: 16px;
+      color: #333;
+    }
+    .section {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .toggle-label {
+      font-size: 14px;
+      color: #555;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #4CAF50;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    .status {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+    .status.active {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    .info {
+      font-size: 12px;
+      color: #888;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #0b7dda;
+    }
+    .site-info {
+      font-size: 12px;
+      color: #333;
+      background: #f5f5f5;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h3>🚀 Smart Paste</h3>
+    <div class="toggle-container">
+      <span class="toggle-label">Enable Smart Paste</span>
+      <label class="switch">
+        <input type="checkbox" id="smartPasteToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="status" id="pasteStatus">OFF</div>
+    <div class="info">Press Alt+D to paste with bypass detection</div>
+  </div>
+
+  <div class="section">
+    <h3>👁️ Always Active Window</h3>
+    <div class="toggle-container">
+      <span class="toggle-label">Enable for this site</span>
+      <label class="switch">
+        <input type="checkbox" id="alwaysActiveToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="status" id="activeStatus">OFF</div>
+    <div class="site-info" id="siteInfo">Loading...</div>
+    <div class="info">Keeps window focused even when you switch tabs</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
