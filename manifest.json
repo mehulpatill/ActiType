@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "ActiType",
+  "name": "Smart Paste & Always Active",
   "version": "2.0",
-  "description": "Smart paste  + keeps window always active",
+  "description": "Smart paste that bypasses detection + keeps window always active to prevent test interruptions.",
   "permissions": ["scripting", "contextMenus", "activeTab", "clipboardRead", "storage"],
   "host_permissions": ["*://*/*"],
   "background": {
